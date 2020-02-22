@@ -1,0 +1,23 @@
+{
+  "name": "finn.rebarchik.com",
+  "version": "1.0.0",
+  "description": "Finn's Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server --serveStatic \"./\" --files \"*.*\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finnreb/finn.rebarchik.com.git"
+  },
+  "author": "Finn Rebarchik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finnreb/finn.rebarchik.com/issues"
+  },
+  "homepage": "https://github.com/finnreb/finn.rebarchik.com#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
