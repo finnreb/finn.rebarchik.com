@@ -14,3 +14,5 @@
 # Protect auth files
 .*
 auth*
+
+node_modules

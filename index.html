@@ -4,24 +4,12 @@
   <meta charset="utf-8">
   <title>Finn Rebarchik</title>
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/746852/739588/css/fonts.css" />
+  <link href="//fonts.googleapis.com/css?family=Muli|Oswald|Roboto+Mono|Roboto+Slab|Teko&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
   <style type="text/css">
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    body {
-      font-family: "Whitney SSm A", "Whitney SSm B", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-      background-color: #2D72D9;
-      color: #fff;
-      -moz-font-smoothing: antialiased;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    /* CSS Styles go here. */
     .container {
-      text-align: center;
+      text-align: full;
       height: 100%;
     }
 
@@ -30,78 +18,101 @@
       top: 10%;
     }
 
-    @media (max-width: 480px) {
-      .container {
-        position: relative;
-        top: 50%;
-        height: initial;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
-    }
-
     .container h1 {
-      margin: 0;
-      font-size: 130px;
-      font-weight: 300;
+        margin: 0;
+        font-size: 70px;
+        font-weight: 300;
+    }
+    a {
+      color: grey;
+    }
+    .star-wars {
+      font-family: 'Star Jedi', 'Oswald', sans-serif;
     }
 
-    @media (min-width: 480px) {
-      .container h1 {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+    body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .fade {
+      position: relative;
+      width: 100%;
+      min-height: 60vh;
+      top: -25px;
+      background-image: linear-gradient(0deg, transparent, black 75%);
+      z-index: 1;
+    }
+
+    .star-wars-crawl {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 800px;
+      color: #feda4a;
+      font-family: 'Pathway Gothic One', sans-serif;
+      font-size: 500%;
+      font-weight: 600;
+      letter-spacing: 6px;
+      line-height: 150%;
+      perspective: 400px;
+      text-align: justify;
+    }
+
+    .crawl {
+      position: relative;
+      top: 99999px;
+      transform-origin: 50% 100%;
+      animation: crawl 40s linear;
+    }
+
+    .crawl > .title {
+      font-size: 90%;
+      text-align: center;
+    }
+
+    .crawl > .title h1 {
+      margin: 0 0 100px;
+      text-transform: uppercase;
+    }
+
+    @keyframes crawl {
+      0% {
+        top: -100px;
+        transform: rotateX(20deg)  translateZ(0);
       }
-    }
-
-    @media (min-width: 768px) {
-      .container h1 {
-        font-size: 220px;
+      100% { 
+        top: -6000px;
+        transform: rotateX(25deg) translateZ(-2500px);
       }
-    }
-
-    .return {
-      color: rgba(255, 255, 255, 0.6);
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      margin: 0;
-    }
-
-    @media (min-width: 480px) {
-      .return {
-        position: absolute;
-        width: 100%;
-        bottom: 30px;
-      }
-    }
-
-    .return a {
-      padding-bottom: 1px;
-      color: #fff;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-      -webkit-transition: border-color 0.1s ease-in;
-      transition: border-color 0.1s ease-in;
-    }
-
-    .return a:hover {
-      border-bottom-color: #fff;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Finn Rebarchik</h1>
-    <ul>
-      <li><a href="karate.html">Karate</a></li>
-    </ul>
-    <P>
-      I like to play Roblox a lot. It is very fun. There are so many
-      games you can play! My favorite game is Exreme Skydiving.
-    </P>
-  </div>
+  <section class="star-wars-crawl">
+
+    <div class="crawl">
+      <div class="container">
+        <h1 class="font-oswald title">Finn Rebarchik:</h1>
+        <p>
+          I like to play Roblox a lot. It is very fun. There are so many
+          games you can play! My favorite game is Exreme Skydiving.
+        </p>
+        <p>
+          My favorite <span class="star-wars">Star Wars</span> creature is a porg. They are
+          soooooooooooo adorable. They are in all of the new <span class="star-wars">Star Wars</span> movies
+        </p>
+        <p>
+          Today we did a coke and mentos experiment at the park with my brother, sister, and my dad.
+        </p>
+        <p>
+          My favorite youtubers are DanTDM, unspeakable, and infinite.
+        </p>
+      </div>
+    </div>
+  
+  </section>
 </body>
 </html>
